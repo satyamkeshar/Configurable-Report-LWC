@@ -1,0 +1,162 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <!-- first card -->
+       
+        <div class="slds-col" if:false={hideComponent1}>
+            <lightning-card>
+                <div class="slds-p-horizontal_large">
+                    <!-- Heading/Title -->
+                    <div class="slds-align_absolute-center">
+                        <lightning-icon icon-name="custom:custom17" size="medium" class="icon"></lightning-icon>
+                        <!-- <img class="slds-m-right_x-small" style="max-width:10%;max-height:10%;" src={RupeeSymbol} alt="Growth Rate" /> -->
+                        <span class="slds-text-heading_medium slds-m-left_x-small"><b>{titleA}</b></span>
+                    </div>
+
+<!-- scorecard -->
+                    <div class="slds-box slds-theme_shade slds-m-around_medium" if:false={hideScorecard1}>
+                        <div class="card slds-p-around_small slds-m-left_x-small">
+                            <div class="slds-text-heading_large slds-text-align_center">
+                                {scoreText1}
+                            </div>
+                                
+                            <div class="kpi-positive slds-text-align_center slds-text-heading_medium slds-m-top_small">
+                                {taskKpi1}
+                            </div>
+                                <div class="kpi-negative slds-text-align_center">
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- task Bar -->
+                    <div class="slds-media activity-row slds-m-top_small slds-m-bottom_small cursor-hover"
+                        if:false={hideBar1}>
+                        <div class="slds-media__figure ">
+                            <lightning-icon icon-name="standard:report" size="medium" class="icon"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body slds-m-left_x-small">
+                            <div class="slds-text-body_regular slds-m-bottom_xx-small">
+                                {taskKpi1} {taskLabel}
+                            </div>
+                            <div class="slds-progress-bar slds-progress-bar_large" aria-valuemin="0" aria-valuemax="100"
+                                role="progressbar">
+                                <span class="slds-progress-bar__value" style={tasksCompletedStyleSyntax1}>
+                                </span>
+                            </div>
+
+                            <div
+                                class="slds-text-body_regular slds-text-color_weak slds-text-align_right slds-m-top_xx-small">
+                                Goal: {taskGoal1}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+
+        <!-- second card         -->
+        <div class="slds-col" if:false={hideComponent2}>
+            <lightning-card>
+                <div class="card slds-card slds-p-horizontal_large">
+
+                    <!-- Heading/Title -->
+                    <div class="slds-align_absolute-center">
+                        <lightning-icon icon-name="standard:case" size="medium" class="icon"></lightning-icon>
+
+                        <!-- <img class="slds-m-right_x-small" style="max-width:10%;max-height:10%;" src={pipeLinePNG} alt="Growth Rate" /> -->
+                        <span class="slds-text-heading_medium slds-m-left_x-small"><b>{titleB}</b></span>
+                    </div>
+<!-- scorecard -->
+                    <div class="slds-box slds-theme_shade slds-m-around_medium" if:false={hideScorecard2}>
+                        <div class="card slds-p-around_small slds-m-left_x-small">
+                            <div class="slds-text-heading_large slds-text-align_center">
+                                {scoreText2}
+                            </div>
+                                <div class="kpi-positive slds-text-align_center slds-text-heading_medium slds-m-top_small">
+                                    {taskKpi2}
+                                </div>
+                                <div class="kpi-negative slds-text-align_center">
+                                </div>
+                    </div>
+        
+                    </div>
+                    <!-- task Bar -->
+                    <div class="slds-media activity-row slds-m-top_small slds-m-bottom_small cursor-hover"
+                        if:false={hideBar2} onclick={navigateToTask}>
+                        <div class="slds-media__figure ">
+                            <lightning-icon icon-name="standard:report" size="medium" class="icon"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body slds-m-left_x-small">
+                            <div class="slds-text-body_regular slds-m-bottom_xx-small">
+                                {taskKpi2} {taskLabel}
+                            </div>
+                            <div class="slds-progress-bar slds-progress-bar_large" aria-valuemin="0" aria-valuemax="100"
+                                role="progressbar">
+                                <span class="slds-progress-bar__value" style={tasksCompletedStyleSyntax2}>
+                                </span>
+                            </div>
+
+                            <div
+                                class="slds-text-body_regular slds-text-color_weak slds-text-align_right slds-m-top_xx-small">
+                                Goal: {taskGoal2}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+        <!-- third card         -->
+        <div class="slds-col" if:false={hideComponent3}> 
+            <lightning-card>
+                <div class="slds-card slds-p-horizontal_large">
+
+                    <!-- Heading/Title -->
+                    <div class="slds-align_absolute-center">
+                        <lightning-icon icon-name="standard:opportunity" size="medium"   class="icon" ></lightning-icon>
+
+                        <!-- <img class="slds-m-right_x-small" style="max-width:10%;max-height:10%;" src={casePNG} alt="Growth Rate" /> -->
+                        <span class="slds-text-heading_medium slds-m-left_x-small"><b>{titleC}</b></span>
+                    </div>
+                    <!-- scorecard -->
+                    <div class="slds-box slds-theme_shade slds-m-around_medium" if:false={hideScorecard3}>
+                        <div class="card slds-p-around_small slds-m-left_x-small">
+                            <div class="slds-text-heading_large slds-text-align_center">
+                               {scoreText3} 
+                            </div>
+                                <div class="kpi-positive slds-text-align_center slds-text-heading_medium slds-m-top_small">
+                                    {taskKpi3}
+                                </div>
+                                <div class="kpi-negative slds-text-align_center">
+                                </div>
+                        </div>
+        
+                    </div>
+                    
+                    <!-- task Bar -->
+                    <div class="slds-media activity-row slds-m-top_small slds-m-bottom_small cursor-hover"
+                        if:false={hideBar3} onclick={navigateToTask}>
+                        <div class="slds-media__figure ">
+                            <lightning-icon icon-name="standard:report" size="medium" class="icon"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body slds-m-left_x-small">
+                            <div class="slds-text-body_regular slds-m-bottom_xx-small">
+                                {taskKpi3} {taskLabel}
+                            </div>
+                            <div class="slds-progress-bar slds-progress-bar_large" aria-valuemin="0" aria-valuemax="100"
+                                role="progressbar">
+                                <span class="slds-progress-bar__value" style={tasksCompletedStyleSyntax3}>
+                                </span>
+                            </div>
+                            <div
+                                class="slds-text-body_regular slds-text-color_weak slds-text-align_right slds-m-top_xx-small">
+                                Goal: {taskGoal3}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+    </div>
+
+
+
+</template>

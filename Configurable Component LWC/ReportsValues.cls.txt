@@ -1,0 +1,25 @@
+global class ReportsValues {
+    @AuraEnabled(Cacheable=true)
+    public static Double getBasicReport1(String reportId1) {
+        Reports.ReportResults results = Reports.ReportManager.runReport(reportId1, true);
+
+        System.debug((Double) results.getFactMap().get('T!T').getAggregates().get(0).getValue());
+        return (Double) (results.getFactMap().get('T!T').getAggregates().get(0).getValue());
+    }
+
+    @AuraEnabled(Cacheable=true)
+    public static Double getBasicReport2(String reportId2) {
+        Reports.ReportResults results = Reports.ReportManager.runReport(reportId2, true);
+
+        System.debug((Double) results.getFactMap().get('T!T').getAggregates().get(0).getValue());
+        return (Double) (results.getFactMap().get('T!T').getAggregates().get(0).getValue());
+    }
+    @AuraEnabled(Cacheable=true)
+    public static Double getBasicReport3(String reportId3) {
+        Reports.ReportResults results = Reports.ReportManager.runReport(reportId3, true);
+
+        System.debug((Double) results.getFactMap().get('T!T').getAggregates().get(0).getValue());
+        return (Double) (results.getFactMap().get('T!T').getAggregates().get(0).getValue());
+    }
+
+}

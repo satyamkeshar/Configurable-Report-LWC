@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__HomePage</target>
+        <target>lightning__AppPage</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__Tab</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig
+            targets="lightning__HomePage, lightning__AppPage, lightning__RecordPage, lightningCommunity__Default">
+            <property
+                name="titleA"
+                type="String"
+                default="Enter Your Component Title"
+                label="Component Title 1"
+                description="Customize the Title of the component">
+            </property>
+            <property
+                name="hideComponent1"
+                type="Boolean"
+                default="false"
+                label="Hide component 1?"
+                description="Would you like to hide the component 1?">
+            </property>
+            <property
+            name="scoreText1"
+            type="String"
+            default="Enter Your ScoreCard Title"
+            label="ScoreCard Title 1"
+            description="Customize the ScoreCard Title of the component">
+        </property>
+            <property
+            name="hideScorecard1"
+            type="Boolean"
+            default="false"
+            label="Hide ScoreCard 1?"
+            description="Would you like to hide the ScoreCard 1?">
+        </property>
+            <property
+            name="hideBar1"
+            type="Boolean"
+            default="false"
+            label="Hide bar 1?"
+            description="Would you like to hide the report?">
+        </property>
+        <property
+                name="taskGoal1"
+                type="Integer"
+                default="100"
+                label="Goal 1"
+                description="What is the goal for report?"
+                min="0">
+            </property>
+            <property
+                name="titleB"
+                type="String"
+                default="Enter Your Component Title"
+                label="Component Title 2"
+                description="Customize the Title of the component">
+            </property>
+            <property
+            name="hideComponent2"
+            type="Boolean"
+            default="false"
+            label="Hide component 2?"
+            description="Would you like to hide the component 2?">
+        </property>
+        <property
+        name="scoreText2"
+        type="String"
+        default="Enter Your ScoreCard Title"
+        label="ScoreCard Title 2"
+        description="Customize the ScoreCard Title of the component">
+    </property>
+        <property
+        name="hideScorecard2"
+        type="Boolean"
+        default="false"
+        label="Hide ScoreCard 2?"
+        description="Would you like to hide the ScoreCard 2?">
+    </property>
+        <property
+        name="hideBar2"
+        type="Boolean"
+        default="false"
+        label="Hide bar 2?"
+        description="Would you like to hide the report?">
+    </property>
+    <property
+    name="taskGoal2"
+    type="Integer"
+    default="100"
+    label="Goal 2"
+    description="What is the goal for report?"
+    min="0">
+</property>
+            <property
+                name="titleC"
+                type="String"
+                default="Enter Your Component Title"
+                label="Component Title 3"
+                description="Customize the Title of the component">
+            </property>
+           
+            <property
+            name="hideComponent3"
+            type="Boolean"
+            default="false"
+            label="Hide component 3?"
+            description="Would you like to hide the component 3?">
+        </property>
+        <property
+        name="scoreText3"
+        type="String"
+        default="Enter Your ScoreCard Title"
+        label="ScoreCard Title 3"
+        description="Customize the ScoreCard Title of the component">
+    </property>
+        <property
+        name="hideScorecard3"
+        type="Boolean"
+        default="false"
+        label="Hide ScoreCard 3?"
+        description="Would you like to hide the ScoreCard 3?">
+    </property>
+        <property
+        name="hideBar3"
+        type="Boolean"
+        default="false"
+        label="Hide bar 3?"
+        description="Would you like to hide the report?">
+    </property>
+     
+    <property
+    name="taskGoal3"
+    type="Integer"
+    default="100"
+    label="Goal 3"
+    description="What is the goal for report?"
+    min="0">
+</property>
+            <property
+                name="taskReportId1"
+                type="String"
+                datasource="apex://ReportsPicklistTasks"
+                label="Report 1"
+                description="Select the Report ID that will supply the report 1">
+            </property>
+            <property
+            name="taskReportId2"
+            type="String"
+            datasource="apex://ReportsPicklistTasks"
+            label="Report 2"
+            description="Select the Report ID that will supply the report 1">
+        </property>
+        <property
+        name="taskReportId3"
+        type="String"
+        datasource="apex://ReportsPicklistTasks"
+        label="Report 3"
+        description="Select the Report ID that will supply the report 1">
+    </property>
+            
+        
+
+            <property
+                name="taskLabel"
+                type="String"
+                default="Enter result name"
+                label="After percentage"
+                description="Customize the result of the component">
+            </property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
